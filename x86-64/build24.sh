@@ -46,6 +46,7 @@ echo "$(date '+%Y-%m-%d %H:%M:%S') - 开始构建固件..."
 # 定义所需安装的包列表 下列插件你都可以自行删减
 PACKAGES=""
 PACKAGES="$PACKAGES curl"
+PACKAGES="$PACKAGES htop"
 PACKAGES="$PACKAGES luci-i18n-diskman-zh-cn"
 PACKAGES="$PACKAGES luci-i18n-firewall-zh-cn"
 PACKAGES="$PACKAGES luci-theme-argon"
@@ -64,18 +65,17 @@ PACKAGES="$PACKAGES luci-i18n-filemanager-zh-cn"
 # 静态文件服务器dufs(推荐)
 PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
 # n2n 
-CONFIG_PACKAGE_luci-app-n2n=y
-# CONFIG_PACKAGE_luci-i18n-n2n-zh-cn=y
-# CONFIG_PACKAGE_n2n=y
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-n2n"
 # openconnect
-CONFIG_PACKAGE_openconnect=y
-CONFIG_PACKAGE_luci-proto-openconnect=y
-CONFIG_OPENCONNECT_OPENSSL=y
+PACKAGES="$PACKAGES CONFIG_PACKAGE_openconnect"
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-proto-openconnect"
+PACKAGES="$PACKAGES CONFIG_OPENCONNECT_OPENSSL"
 #其他
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-wol=y
-CONFIG_PACKAGE_luci-app-netdata=y
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-frpc"
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-wol"
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-netdata"
+PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-vlmcsd"
+
 # ======== shell/custom-packages.sh =======
 # 合并imm仓库以外的第三方插件
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
