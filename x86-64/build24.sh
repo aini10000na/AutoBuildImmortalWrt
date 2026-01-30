@@ -65,16 +65,15 @@ PACKAGES="$PACKAGES luci-i18n-filemanager-zh-cn"
 # 静态文件服务器dufs(推荐)
 PACKAGES="$PACKAGES luci-i18n-dufs-zh-cn"
 # n2n 
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-n2n"
+PACKAGES="$PACKAGES luci-app-n2n"
 # openconnect
-PACKAGES="$PACKAGES CONFIG_PACKAGE_openconnect"
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-proto-openconnect"
-PACKAGES="$PACKAGES CONFIG_OPENCONNECT_OPENSSL"
+PACKAGES="$PACKAGES openconnect"
+PACKAGES="$PACKAGES luci-proto-openconnect"
 #其他
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-frpc"
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-wol"
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-netdata"
-PACKAGES="$PACKAGES CONFIG_PACKAGE_luci-app-vlmcsd"
+PACKAGES="$PACKAGES luci-app-frpc"
+PACKAGES="$PACKAGES luci-app-wol"
+PACKAGES="$PACKAGES luci-app-netdata"
+PACKAGES="$PACKAGES luci-app-vlmcsd"
 
 # ======== shell/custom-packages.sh =======
 # 合并imm仓库以外的第三方插件
